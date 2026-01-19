@@ -63,8 +63,8 @@ body {
     transform: translateY(-2px) scale(1.08);
 }
 
-/* About & Contact section */
-.about-me, .contact-info {
+/* About, Contact & Projects section */
+.about-me, .contact-info, .projects-section {
     background: #fff;
     margin: 40px auto 24px auto;
     padding: 32px 32px 24px 32px;
@@ -96,6 +96,58 @@ body {
 .about-me p, .contact-info p {
     color: #555;
     font-size: 1.1rem;
+}
+
+/* --- NEW PROJECT SPECIFIC STYLES --- */
+.project-item {
+    text-align: left; /* Align text left for readability */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.project-item h3 {
+    color: #232526;
+    font-weight: 700;
+}
+
+.project-item ul {
+    text-align: left;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-item li {
+    margin-bottom: 8px;
+}
+
+/* Make the 'View Source' link look like a pill button */
+.project-item a {
+    display: inline-block;
+    background: #f0f2f5;
+    color: #232526;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.project-item a:hover {
+    background: #ffb347;
+    color: #fff;
+    border-color: #ffb347;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 179, 71, 0.3);
+}
+
+/* Style the horizontal line separator */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ccc, transparent);
+    margin: 30px 0;
 }
 
 form {
@@ -145,6 +197,41 @@ form input[type="submit"]:hover {
     background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
     box-shadow: 0 4px 16px rgba(255,179,71,0.18);
     transform: translateY(-2px) scale(1.05);
+}
+
+/* --- NEW FOOTER STYLES --- */
+.footer {
+    padding-bottom: 40px;
+    text-align: center;
+    animation: fadeInUp 1.3s;
+}
+
+.footer-socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.footer-socials-child a .icon svg {
+    width: 36px;
+    height: 36px;
+    fill: #414345; /* Dark grey by default */
+    transition: all 0.3s ease;
+}
+
+.footer-socials-child a .icon svg path {
+    fill: #414345; /* Ensures the path inside takes the color */
+    transition: all 0.3s ease;
+}
+
+.footer-socials-child a:hover .icon svg, 
+.footer-socials-child a:hover .icon svg path {
+    fill: #ffb347; /* Orange on hover */
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 4px 6px rgba(255,179,71,0.3));
 }
 
 @keyframes fadeInDown {
